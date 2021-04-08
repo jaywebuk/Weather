@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.min.css">
 	<link id="styleTime" rel="stylesheet" href="css/style-day.css">
 	<script src="JS/jquery.min.js"></script>
-	<script defer src="JS/weather.min.js"></script>
+	<script defer src="JS/weather.js"></script>
 	<title>Document</title>
 </head>
 

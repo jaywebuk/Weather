@@ -17,11 +17,11 @@ if ($("#alertHeader") !== null) {
 
 function convertTemp(temp) {
 	let tempConvert = Math.round((temp - 32) * (5 / 9));
-	return tempConvert == -0 ? 0 : tempConvert;
+	return Object.is(tempConvert, -0) ? 0 : tempConvert;
 }
 
 function get_cardinals(deg) {
-	cardinals = {
+	let cardinals = {
 		"north": [0, 11],
 		"north-north-east": [11, 34],
 		"north-east": [34, 56],
@@ -51,7 +51,7 @@ function get_cardinals(deg) {
 }
 
 function get_wind(windSpeed) {
-	windDesc = {
+	let windDesc = {
 		"a calm breeze": [0, 0],
 		"light air": [1, 3],
 		"a light breeze": [4, 7],
@@ -148,7 +148,7 @@ function display_current_weather(data, currentTimeData) {
 	let sunset = currentTimeData.sunset;
 
 	if ("wind_gust" in weather) {
-		windGust = Math.round(weather.wind_gust);
+		let windGust = Math.round(weather.wind_gust);
 		$("#gusts").text("Gusts of " + windGust + " mph");
 	} else {
 		$("#gusts").text("");
@@ -224,7 +224,7 @@ function display_next_48Hours(weather48, next48Hours) {
 	$("#hourly-forecast").html("");
 	let previousHourly = 0;
 	weather48.forEach((hourly, i) => {
-		currentTime = next48Hours.time;
+		// let currentTime = next48Hours.time;
 
 		let icon = hourly.weather[0].icon;
 		let description = toUpper(hourly.weather[0].description);
@@ -303,10 +303,12 @@ function display_next_48Hours(weather48, next48Hours) {
 			previousHourlyShowMore.text(">");
 		}
 		if ($(this)[0] == previousHourly[0]) {
+			$(this).css("background-color", "");
 			$(`#details${hour}`).hide();
 			$(`#showMore${hour}`).text(">");
 			previousHourly = 0;
 		} else {
+			$(this).css("background-color", $(`#details${hour}`).css("background-color"));
 			if ($(this).offset().left < $(this).parent().offset().left && window.screen.width > 420) {
 				$(`#details${hour}`).show()
 				$(this)[0].scrollIntoView({
@@ -457,10 +459,12 @@ function display_next_7Days(weather7, next7Days, alerts) {
 			previousDailyShowMore.text(">");
 		}
 		if ($(this)[0] == previousDaily[0]) {
+			$(this).css("background-color", "");
 			$(`#details${day}`).hide();
 			$(`#showMore${day}`).text(">");
 			previousDaily = 0;
 		} else {
+			$(this).css("background-color", $(`#details${day}`).css("background-color"));
 			if ($(this).offset().left < $(this).parent().offset().left && window.screen.width > 420) {
 				$(`#details${day}`).show()
 				$(this)[0].scrollIntoView({

@@ -58,7 +58,7 @@ p.data-supplier a {
 
 .hourly-details,
 .daily-details {
-  background-color: var(--background-color);
+  background-color: rgb(24, 41, 71);
 }
 
 ::-webkit-scrollbar-thumb {

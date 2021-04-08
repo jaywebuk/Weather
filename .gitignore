@@ -7,4 +7,4 @@ chromephp.php
 *.min.*
 !jquery.min.js
 get_weather.php
-api_key.php
+.api_key.php

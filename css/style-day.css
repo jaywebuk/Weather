@@ -55,7 +55,7 @@ p.data-supplier a {
 
 .hourly-details,
 .daily-details {
-  background-color: var(--background-color);
+  background-color: rgb(168, 230, 255);
   border-top: solid thin var(--border-color);
   border-bottom: solid thin var(--border-color);
 
