@@ -1,0 +1,90 @@
+:root {
+  --background-color: rgb(138, 222, 255);
+  --header-bgcolor: #478;
+  --border-color: #789;
+}
+
+body {
+  background-color: rgb(197, 237, 255);
+
+}
+
+.main-header {
+  background-color: var(--header-bgcolor);
+}
+
+.main-header a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.main-footer {
+  color: #555;
+}
+
+p.copyright a {
+  color: rgb(47, 143, 233);
+}
+
+p.data-supplier a {
+  color: rgb(47, 143, 233);
+}
+
+.location-label {
+  background-color: var(--background-color);
+  border: solid thin var(--border-color);
+}
+
+.details {
+  background-color: var(--background-color);
+  border: solid thin var(--border-color);
+}
+
+.forecast-hour,
+.forecast-day {
+  background-color: var(--background-color);
+  border: solid thin var(--border-color);
+}
+
+.forecast-hour,
+.forecast-day {
+  border-left: 1px solid var(--border-color);
+}
+
+
+.hourly-details,
+.daily-details {
+  background-color: var(--background-color);
+  border-top: solid thin var(--border-color);
+  border-bottom: solid thin var(--border-color);
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border: solid 1px #888;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #888;
+}
+
+.alerts,
+.alertBody {
+  background-color: var(--background-color);
+  border: solid thin var(--border-color);
+}
+
+.alerts {
+  border-bottom: none;
+}
+
+.alertBody {
+  border-top: none;
+}
+
+.showMore,
+.showMoreDaily {
+  color: #555;
+}

@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+.yarn
+*.jpg
+*.svg
+chromephp.php
+*.min.*
+!jquery.min.js
+get_weather.php
+api_key.php
