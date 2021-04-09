@@ -222,7 +222,7 @@ function display_next_48Hours(weather48, next48Hours) {
 	next48Hours = next48Hours.slice(1);
 
 	$("#hourly-forecast").html("");
-	let previousHourly = 0;
+	
 	weather48.forEach((hourly, i) => {
 		// let currentTime = next48Hours.time;
 
@@ -294,6 +294,10 @@ function display_next_48Hours(weather48, next48Hours) {
 		]);
 
 	});
+
+	let previousHourly = 0;
+	let previousHourlyDetails;
+	let previousHourlyShowMore;
 
 	$(".forecast-hour").on("click", function () {
 		let hour = $(this)[0].id;
@@ -452,6 +456,9 @@ function display_next_7Days(weather7, next7Days, alerts) {
 	});
 
 	let previousDaily = 0;
+	let previousDailyDetails;
+	let previousDailyShowMore;
+	
 	$(".forecast-day").on("click", function () {
 		let day = $(this)[0].id;
 
