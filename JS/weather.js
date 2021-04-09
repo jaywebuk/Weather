@@ -299,6 +299,7 @@ function display_next_48Hours(weather48, next48Hours) {
 		let hour = $(this)[0].id;
 
 		if (previousHourly != 0) {
+			$(previousHourly).css("background-color", "");
 			$(previousHourlyDetails).hide();
 			previousHourlyShowMore.text(">");
 		}
@@ -455,6 +456,7 @@ function display_next_7Days(weather7, next7Days, alerts) {
 		let day = $(this)[0].id;
 
 		if (previousDaily != 0) {
+			$(previousDaily).css("background-color", "");
 			$(previousDailyDetails).hide();
 			previousDailyShowMore.text(">");
 		}
