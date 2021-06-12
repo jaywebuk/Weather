@@ -18,7 +18,7 @@
 	<main>
 		<section class="social">
 			<a href="https://www.twitter.com/jayuk79" target="_blank"><img src="img/Twitter_32.png"alt="Twitter"></a>
-			<a href="https://github.com/jayuk79" target="_blank"><img src="img/GitHub_32_light.png" alt="GitHub"></a>
+			<a href="https://github.com/jaywebuk" target="_blank"><img src="img/GitHub_32_light.png" alt="GitHub"></a>
 		</section>
 
 		<form id="weatherForm" action="javascript:getWeather(this.city.value)" method="get">
