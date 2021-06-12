@@ -43,7 +43,7 @@ function get_cardinals(deg) {
 
 	for (const direction in cardinals) {
 		if (deg >= cardinals[direction][0] && deg < cardinals[direction][1]) {
-			return direction === "N2" ? "north" : direction;
+			return direction == "N2" ? "north" : direction;
 		}
 	}
 
@@ -127,6 +127,7 @@ async function getWeather(city) {
 function display_current_weather(data, currentTimeData) {
 	$("#alerts").hide();
 	$("#warning").hide();
+	console.log(data.weatherData);
 	let weather = data.weatherData.current;
 
 	$("#locationName").text(`${data.name} (${data.country})`);
@@ -382,7 +383,7 @@ function display_next_7Days(weather7, next7Days, alerts) {
 					$(`#day${i}`).append($("<img>", {
 						"class": "warningDaily",
 						"src": `img/${warningImage}.png`,
-						"title": "Weather alerts issued for today. See &quot;Weather Alerts&quot;"
+						"title": "Weather alerts issued for today. See \"Weather Alerts\""
 					}));
 					break;
 				}
