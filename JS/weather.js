@@ -127,7 +127,6 @@ async function getWeather(city) {
 function display_current_weather(data, currentTimeData) {
 	$("#alerts").hide();
 	$("#warning").hide();
-	console.log(data.weatherData);
 	let weather = data.weatherData.current;
 
 	$("#locationName").text(`${data.name} (${data.country})`);
