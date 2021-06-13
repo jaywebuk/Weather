@@ -361,6 +361,7 @@ function display_next_7Days(weather7, next7Days, alerts) {
 		let sunrise = next7Days[i].sunrise;
 		let sunset = next7Days[i].sunset;
 		let pressure = daily.pressure;
+		let precipitation = daily.pop;
 
 		$("#daily-forecast").append($("<article>", {
 			"id": `day${i}`,
@@ -448,9 +449,10 @@ function display_next_7Days(weather7, next7Days, alerts) {
 		$(`#detailsday${i}`).append([
 			$("<p>").text(`${description}`),
 			$("<p>").text(`${toUpper(get_wind(windSpeed))} from the ${get_cardinals(windDeg)}`),
-			$("<p>").html(`<p>Day Feels Like: ${dayFeelsLikeC}&deg;C / ${dayFeelsLikeF}&deg;F`),
-			$("<p>").html(`Night Feels Like: ${nightFeelsLikeC}&deg;C / ${nightFeelsLikeF}&deg;F`),
+			// $("<p>").html(`<p>Day Feels Like: ${dayFeelsLikeC}&deg;C / ${dayFeelsLikeF}&deg;F`),
+			// $("<p>").html(`Night Feels Like: ${nightFeelsLikeC}&deg;C / ${nightFeelsLikeF}&deg;F`),
 			$("<p>").text(`Pressure: ${pressure} mb`),
+			$("<p>").text(`Chance of Precipitation: ${Math.round(precipitation * 100)}%`),
 			$("<p>").text(`Sunrise: ${sunrise} / Sunset: ${sunset}`)
 		]);
 	});

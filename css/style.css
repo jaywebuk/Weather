@@ -301,9 +301,13 @@ p.gusts {
 	margin-bottom: 7px;
 }
 
+.daily-details p:not(:last-child) {
+	margin-bottom: 13px;
+}
+
 .daily-forecast {
 	max-width: 980px;
-	height: 180px;
+	/* height: 200px; */
 }
 
 .daily-forecast .wind p {
