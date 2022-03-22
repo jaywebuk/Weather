@@ -170,7 +170,7 @@ function display_current_weather(data, currentTimeData) {
 
 	$("#wind-speed").attr("style", "transform: rotate(" + windDeg + "deg)").attr("title", `From the ${windDirection}`);
 
-	$("#windSpeed").text(windSpeed + "mph");
+	$("#windSpeed").text(windSpeed + " mph");
 
 	$("#sunrise").text(sunrise);
 	$("#sunset").text(sunset);

@@ -3,7 +3,7 @@
 if (!filter_has_var(INPUT_GET, "location"))
 	header("location: ./");
 
-$location = filter_var($_GET["location"], FILTER_SANITIZE_STRING);
+$location = htmlspecialchars($_GET["location"], ENT_QUOTES);
 
 if ($coords = json_decode(file_get_contents("http://api.openweathermap.org/geo/1.0/direct?q=$location&limit=1&appid={API-KEY}"))) {
 	$lat = $coords[0]->lat;

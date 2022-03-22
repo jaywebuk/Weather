@@ -8,3 +8,4 @@ chromephp.php
 !jquery.min.js
 get_weather.php
 .api_key.php
+cookie.notice.js

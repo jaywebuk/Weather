@@ -10,6 +10,7 @@
 	<link id="styleTime" rel="stylesheet" href="css/style-day.css">
 	<script src="JS/jquery.min.js"></script>
 	<script defer src="JS/weather.js"></script>
+	<script src="JS/cookie.notice.js"></script>
 	<title>Document</title>
 </head>
 
